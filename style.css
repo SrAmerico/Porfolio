@@ -1,5 +1,291 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
+}
+
+body {
+    color: azure;
+    background: #252525;
+}
+
+canvas {
+    position: absolute;
+    width: 102%;
+    filter: drop-shadow(0px 0px 1px rgb(255, 0, 0)) drop-shadow(0px 0px 6px rgb(47, 0, 255)) drop-shadow(0px 0px 15px rgb(47, 4, 236)) saturate(1) brightness(3) hue-rotate(-85deg) contrast(2) blur(0px);
+    transition: 300ms ease-in;
+}
+
+.box-canva {
+    background-color: #111111;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+
+    align-items: center;
+    justify-content: center;
+    z-index: -10;
+}
+
+.main-principal {
+    padding: 7px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.section-first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+}
+
+.principal-img {
+    width: 320px;
+    border-radius: 350px;
+}
+
+.text-img-first {
+    top: 300px;
+    position: absolute;
+    text-align: center;
+    background-color: #1515153f;
+    padding: 20px 40px;
+    backdrop-filter: blur(10px);
+    border-bottom: rgb(0, 162, 255) solid 1px;
+    background: #15151500;
+    box-shadow: inset 0 -10px 10px -5px rgb(0, 162, 255);
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.box-links {
+    background: #101010cb;
+    padding: 50px;
+    width: 250px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    border-radius: 3px;
+    box-shadow: inset 0 -5px 10px -5px rgb(0, 162, 255);
+
+}
+
+.box-links-text {
+    text-align: center;
+    padding: 0px 10px 0px 0px;
+}
+
+.links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.links li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #0e0e0e7c;
+    border-radius: 3px;
+}
+
+.links li:hover {
+    background-color: #252525;
+    color: #ffffff;
+    cursor: pointer;
+    filter: invert(1);
+
+}
+
+.section-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    padding: 15vh 0px 0px;
+    border-radius: 32px;
+}
+
+.secundaria-img {
+    width: 250px;
+    box-shadow: 0px 0px 0px 5px rgb(58, 58, 58),0px 0px 0px 8px rgb(255, 255, 255);
+    border-radius: 250px;
+    filter: contrast(1.6) saturate(0.7);
+}
+
+.box-img {
+    padding: 10px 20px;
+    width: 250px;
+    background-color: #151515b9;
+    border: 5px #d5d5d5 double;
+    border-radius: 16px;
+
+    & h1{
+        padding: 20px 0px 0px 0px;
+        border-bottom: 1px solid #d5d5d5;
+    }
+    & p{
+        padding: 20px;
+    }
+}
+
+.box-card {
+    padding: 50px;
+    background-color: #151515b9;
+    width: 30vw;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 5px #d5d5d5 double;
+
+    & h1{
+        border-bottom: 1px solid #d5d5d5;
+    }
+    & p{
+        padding: 20px;
+    }
+}
+
+.link-option {
+    display: flex;
+    justify-content: end;
+    padding: 100px 0px 0px;
+    gap: 15px;
+}
+
+.link-option button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.link-option a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.link-option a:hover {
+    background: #fff;
+    color: #252525;
+    cursor: pointer;
+}
+
+.link-option button:hover {
+    background: #fff;
+    color: #252525;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        top: -300px;
+    }
+    to {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+
+.ativado-flex {
+    display: flex;
+    opacity: 1;
+    top: 0;
+    animation: fadeIn 800ms ease-out;
+    position: relative;
+}
+
+.desativado {
+    opacity: 0;
+    top: -300px;
+    visibility: hidden;
+    position: absolute;
+}
+
+.blur-canva{
+    filter: drop-shadow(0px 0px 1px rgb(255, 0, 0)) drop-shadow(0px 0px 6px rgb(47, 0, 255)) drop-shadow(0px 0px 15px rgb(47, 4, 236)) saturate(1) brightness(3) hue-rotate(-85deg) contrast(2) blur(20px);    transition: 600ms ease-in;
+}
+
+@media (max-width: 320px) {
+    .section-second{
+        flex-direction: column;
+        align-items: center;
+        padding: 10vh 0;
+    }
+
+    .box-card {
+        padding: 20px;
+        background-color: #151515b9;
+        width: 250px;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 5px #d5d5d5 double;
+    }
+    .link-option {
+        display: flex;
+        justify-content: end;
+        padding: 50px 0px 0px;
+        gap: 15px;
+    }
+
+    .link-option button{
+        background: none;
+        border: 1px solid white;
+        color: #ffffff;
+        background-color: #1111119a;
+        padding: 5px 10px;
+    }
+
+    .link-option a{
+        background: none;
+        border: 1px solid white;
+        color: #ffffff;
+        background-color: #1111119a;
+        padding: 5px 30px;
+    }
+    
+    .section-first {
+        padding: 25px 0px;
+    }
+
+    .main-principal {
+        padding: 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .principal-img {
+        width: 250px;
+        border-radius: 300px;
+    }
+
+    .text-img-first {
+        top: 210px;
+        position: absolute;
+        text-align: center;
+        background-color: #1515153f;
+        padding: 20px 20px 20px 20px;
+        backdrop-filter: blur(10px);
+        border-bottom: rgb(0, 162, 255) solid 1px;
+        background: #15151500;
+        box-shadow: inset 0 -10px 10px -5px rgb(0, 162, 255);
+        border-radius: 5px;
+        z-index: 2;
+    }
+
 }
 

@@ -1,12 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
+
 <body>
-    
+
+    <div class="box-canva">
+        <canvas id="canva"></canvas>
+    </div>
+
+    <main class="main-principal">
+        <section class="section-first ativado-flex" id="s1">
+            <img class="principal-img"
+                src="./img/image 1.svg"
+                alt="">
+            <span class="text-img-first">
+                <h1>Vitor Américo</h1>
+                <p>Desenvolvedor Web & Jogos Digitais</p>
+            </span>
+            <div class="box-links">
+                <span class="box-links-text">
+                    <h3>Bem Vindo!!</h3>
+                    <p>Está é minha arvore de links</p>
+                </span>
+                <ul class="links">
+                    <li onclick="ClickAD('s2')"><img src="./img/github.svg" alt="">
+                        <h3>Portifolio</h3>
+                    </li>
+                    <li onclick="ClickAD('s2')"><img src="./img/github.svg" alt="">
+                        <h3>GitHub</h3>
+                    </li>
+                    <li onclick="ClickAD('s3')"><img src="./img/linkedin.svg" alt="">
+                        <h3>Linkedin</h3>
+                    </li>
+                    <li onclick="ClickAD('s4')"><img src="./img/instagram.svg" alt="">
+                        <h3>Instagram</h3>
+                    </li>
+                    <li onclick="ClickAD('s4')"><img src="./img/.svg" alt="">
+                        <h3>Discord</h3>
+                    </li>
+                    <li onclick="ClickAD('s4')"><img src="./img/.svg" alt="">
+                        <h3>Stack Overflow</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-second desativado" id="s2">
+            <div class="box-img">
+                <img class="secundaria-img" src="./img/image 1.svg" alt="">
+                <span>
+                    <h1>SrAmerico</h1>
+                    <p>[Descrição]</p>
+                </span>
+            </div>
+            <div class="box-card">
+                <span>
+                    <h1>GitHub</h1>
+                    <h2>Olá, eu sou Vitor Américo</h2>
+                    <p>Estudante de Desenvolvimento Web e Mobile, entusiasta de programação e apaixonado por explorar novas tecnologias para criar soluções ainda mais inovadoras.</p>
+                </span>
+                <div class="link-option">
+                    <button onclick="ClickAD('s1')">Voltar</button>
+                    <a href="https://github.com/SrAmerico">Acessar</a>
+                </div>
+            </div>-
+        </section>
+        <section class="section-second desativado" id="s3">
+            <div class="box-img">
+                <img class="secundaria-img"
+                    src="./img/image 1.svg"
+                    alt="">
+                <span>
+                    <h1>Vitor Americo</h1>
+                    <p>Programador Web | React | Spring | TypeScript | Scrum | React Native | GitHub | Dax</p>
+                </span>
+            </div>
+            <div class="box-card">
+                <span>
+                    <h1>Linkedin</h1>
+                    <p>Estudante de Desenvolvimento Web e Mobile, apaixonado por programação e sempre em busca de novas tecnologias para criar soluções inovadoras. Tenho experiência como programador Full-stack, com conhecimentos em React, Spring, TypeScript, Kotlin e React Native. Também sou ativo no GitHub.</p>
+                </span>
+                <div class="link-option">
+                    <button onclick="ClickAD('s1')">Voltar</button>
+                    <a href="https://www.linkedin.com/in/vitor-fernando-alves-am%C3%A9rico-2aaa9a235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Acessar</a>
+                </div>
+            </div>
+        </section>
+        <section class="section-second desativado" id="s4">
+            <div class="box-img">
+                <img class="secundaria-img"
+                    src="./img/image 1.svg"
+                    alt="">
+                <span>
+                    <h1>@vitorfaamerico</h1>
+                    <p>description</p>
+                </span>
+            </div>
+            <div class="box-card">
+                <span>
+                    <h1>Instagram</h1>
+                    <p>Este é o meu perfil pessoal no Instagram onde eu compartilho alguns conteudo que eu gosto, inclusive posts relacionados a Historia.</p>
+                </span>
+                <div class="link-option">
+                    <button onclick="ClickAD('s1')">Voltar</button>
+                    <a href="https://www.instagram.com/vitoraamerico?igsh=YmtxenFzbmpncHdx">Acessar</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
 </body>
+<script src="functions.js"></script>
+<script src="background.js"></script>
+
 </html>
